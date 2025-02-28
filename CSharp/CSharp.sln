@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms", "WinForms\WinFor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlunxBrilhantesExample", "AlunxBrilhantesExample\AlunxBrilhantesExample.csproj", "{E194071A-77A8-4983-B7DB-F0B86C38A66D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeDevEvents", "AwesomeDevEvents\AwesomeDevEvents.csproj", "{0FD7EB61-C76C-41D0-B831-D17C30FC0122}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{E194071A-77A8-4983-B7DB-F0B86C38A66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E194071A-77A8-4983-B7DB-F0B86C38A66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E194071A-77A8-4983-B7DB-F0B86C38A66D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD7EB61-C76C-41D0-B831-D17C30FC0122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD7EB61-C76C-41D0-B831-D17C30FC0122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD7EB61-C76C-41D0-B831-D17C30FC0122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD7EB61-C76C-41D0-B831-D17C30FC0122}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
