@@ -26,7 +26,7 @@ namespace AwesomeDevEvents.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(Guid id)
         {
-            if (TryGetDevEventById(id, out DevEvents devEvent))
+            if (TryGetDevEventById(id, out DevEvents devEvent) == false)
             {
                 return NotFound();
             }
@@ -44,7 +44,7 @@ namespace AwesomeDevEvents.Controllers
         [HttpPut("{id}")]
         public IActionResult Update(Guid id, DevEvents input)
         {
-            if (TryGetDevEventById(id, out DevEvents devEvent))
+            if (TryGetDevEventById(id, out DevEvents devEvent) == false)
             {
                 return NotFound();
             }
@@ -56,7 +56,7 @@ namespace AwesomeDevEvents.Controllers
         [HttpDelete()]
         public IActionResult Delete(Guid id)
         {
-            if (TryGetDevEventById(id, out DevEvents devEvent))
+            if (TryGetDevEventById(id, out DevEvents devEvent) == false)
             {
                 return NotFound();
             }
@@ -68,7 +68,7 @@ namespace AwesomeDevEvents.Controllers
         [HttpPost("{id}/speakers")]
         public IActionResult PostSpeaker(Guid id, DevEventsSpeaker speaker)
         {
-            if (TryGetDevEventById(id, out DevEvents devEvent))
+            if (TryGetDevEventById(id, out DevEvents devEvent) == false)
             {
                 return NotFound();
             }
@@ -77,10 +77,11 @@ namespace AwesomeDevEvents.Controllers
             return CreatedAtAction(nameof(GetById), new { id = devEvent.Id }, devEvent);
         }
 
+
         private bool TryGetDevEventById(Guid id, out DevEvents devEvent)
         {
             devEvent = this._context.Events.SingleOrDefault(x => x.Id == id);
-            return devEvent == null;
+            return devEvent != null;
         }
     }
 }
