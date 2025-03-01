@@ -2,21 +2,19 @@
 {
     public class DevEvents
     {
-        public DevEvents() 
-        {
-            this.Speakers = new List<DevEventsSpeaker>();
-        }
 
         public Guid Id { get; set; }
         public string Title { get; set; }
+        public string Description { get; set; }
         public DateTime StartDate  { get; set; }
         public DateTime EndDate { get; set; }
-        public List<DevEventsSpeaker> Speakers { get; set; }
+        public List<Speaker> Speakers { get; set; }
 
 
-        public void Update(string title, DateTime StartDate, DateTime EndDate)
+        public void Update(string title, string description, DateTime StartDate, DateTime EndDate)
         {
             this.Title = title;
+            this.Description = description;
             this.StartDate = StartDate;
             this.EndDate = EndDate;
         }
